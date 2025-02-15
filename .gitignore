@@ -1,0 +1,14 @@
+*.dll
+*.so
+*.dyll
+
+*.lib
+*.a
+*.dylib
+
+*.obj
+*.o
+
+*.exe
+*.out
+*.bin
