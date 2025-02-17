@@ -1,3 +1,4 @@
+// NOTE: Not solved yet
 #ifdef LOCAL
 #include <fstream>
 #include <ostream>
@@ -10,21 +11,39 @@ void solution()
 	int size;
 	// get array size;
 	std::cin >> size;
-	int countPositive = 0;
+	int negative = 0, positive = 0;
+	int temp;
 	for (int i = 0; i < size; i++)
 	{
-		int temp;
 		std::cin >> temp;
-		countPositive += temp;
+		if (temp < 0)
+		{
+			negative++;
+		}
+		else
+		{
+			positive++;
+		}
 	}
-	if (countPositive >= 0)
+	if (negative == positive)
 	{
 		std::cout << "0\n";
 		return;
 	}
 	// for sum to be positive, positive one should be more
 	// and product to be positive negative one should be even
-	std::cout << -countPositive << std::endl;
+	bool areNegativeEven = negative % 2 == 0;
+	bool isSumPositive = positive > negative;
+	if (isSumPositive && areNegativeEven)
+	{
+		std::cout << "0\n";
+	}
+	else
+	{
+		// calculate operations required
+		int required = negative - positive + (negative % 2 != 0);
+		std::cout << required << std::endl;
+	}
 }
 
 int main()
