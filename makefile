@@ -28,3 +28,15 @@ Buttons:
 
 Coins:
 	g++ ./800/Coins/Coins.cpp -o ./800/Coins/Coins $(INPUT_MODE)
+
+WeNeedAZero:
+	g++ ./800/WeNeedAZero/WeNeedAZero.cpp -o ./800/WeNeedAZero/WeNeedAZero $(INPUT_MODE)
+
+MakeItBeautiful:
+	g++ ./800/MakeItBeautiful/MakeItBeautiful.cpp -o ./800/MakeItBeautiful/MakeItBeautiful $(INPUT_MODE)
+
+Unsorting:
+	g++ ./800/Unsorting/Unsorting.cpp -o ./800/Unsorting/Unsorting $(INPUT_MODE)
+
+UnitArray:
+	g++ ./800/UnitArray/UnitArray.cpp -o ./800/UnitArray/UnitArray $(INPUT_MODE)
