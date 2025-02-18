@@ -5,45 +5,42 @@
 #include <istream>
 #endif
 #include <iostream>
+#include <cmath>
 
 void solution()
 {
-	int size;
-	// get array size;
+	long long size;
 	std::cin >> size;
-	int negative = 0, positive = 0;
-	int temp;
-	for (int i = 0; i < size; i++)
+	// I want even number of negative ones
+	// I want positive ones to be more than equal to negative ones
+
+	long long positive = 0, negative = 0;
+	for (long long i = 0; i < size; i++)
 	{
+		long long temp;
 		std::cin >> temp;
-		if (temp < 0)
-		{
-			negative++;
-		}
-		else
-		{
-			positive++;
-		}
+		positive += temp > 0;
+		negative += temp < 0;
 	}
-	if (negative == positive)
+	long long steps = 0;
+	if (negative > positive)
 	{
-		std::cout << "0\n";
-		return;
+		steps += (negative - positive + 1) / 2;
+		positive += steps;
+		negative -= steps;
 	}
-	// for sum to be positive, positive one should be more
-	// and product to be positive negative one should be even
-	bool areNegativeEven = negative % 2 == 0;
-	bool isSumPositive = positive > negative;
-	if (isSumPositive && areNegativeEven)
+	if (negative % 2 != 0)
 	{
-		std::cout << "0\n";
+		steps += 1;
 	}
-	else
-	{
-		// calculate operations required
-		int required = negative - positive + (negative % 2 != 0);
-		std::cout << required << std::endl;
-	}
+	std::cout << steps << std::endl;
+	// n p 	s  p
+	// 3 0 -3 -1
+	// 2 1 -1 +1
+	// 1 2 +1 +1
+
+	// 3 1 -2 -1
+	// 2 2  0  0
 }
 
 int main()

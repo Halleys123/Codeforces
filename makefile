@@ -40,3 +40,6 @@ Unsorting:
 
 UnitArray:
 	g++ ./800/UnitArray/UnitArray.cpp -o ./800/UnitArray/UnitArray $(INPUT_MODE)
+
+ExtremelyRound:
+	g++ ./800/ExtremelyRound/ExtremelyRound.cpp -o ./800/ExtremelyRound/ExtremelyRound $(INPUT_MODE)
