@@ -43,3 +43,6 @@ UnitArray:
 
 ExtremelyRound:
 	g++ ./800/ExtremelyRound/ExtremelyRound.cpp -o ./800/ExtremelyRound/ExtremelyRound $(INPUT_MODE)
+
+BlankSpace:
+	g++ ./800/BlankSpace/BlankSpace.cpp -o ./800/BlankSpace/BlankSpace $(INPUT_MODE)
