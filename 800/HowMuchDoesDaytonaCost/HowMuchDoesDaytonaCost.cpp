@@ -1,3 +1,5 @@
+// NOTE: Not complete
+
 #ifdef LOCAL
 #include <fstream>
 #include <ostream>
@@ -7,13 +9,12 @@
 
 void solution()
 {
-	// a b c d e
-	// by xoring with x
-	// f g h i j
-	// (a^x)^(b^x)^(c^x)^(d^x)^(e^x)
-	// == ((a)^(b)^(c)^(d)^(e))^(x^x^x^x^x)
-	// if size is odd then x exists if xorSum is not 0 and x = xorSum
-	// if size is even then x does not exist
+	// size of array
+	int n;
+	// common integer
+	int k;
+	int temp;
+	std::cin >> n >> k;
 }
 
 int main()
