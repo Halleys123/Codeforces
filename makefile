@@ -46,3 +46,6 @@ ExtremelyRound:
 
 BlankSpace:
 	g++ ./800/BlankSpace/BlankSpace.cpp -o ./800/BlankSpace/BlankSpace $(INPUT_MODE)
+
+WalkingMaster:
+	g++ ./800/WalkingMaster/WalkingMaster.cpp -o ./800/WalkingMaster/WalkingMaster $(INPUT_MODE)
