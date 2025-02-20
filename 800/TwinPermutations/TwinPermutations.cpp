@@ -7,40 +7,15 @@
 
 void solution()
 {
-	long long size;
+	int size, temp;
 	std::cin >> size;
-	long long xorSum;
-	long long temp;
-	std::cin >> xorSum;
-	for (long long i = 0; i < size - 1; i++)
+	size += 1;
+	for (int i = 0; i < size - 1; i++)
 	{
 		std::cin >> temp;
-		xorSum ^= temp;
+		std::cout << size - temp << " ";
 	}
-	long long ans = 0;
-	if (size % 2 == 0)
-	{
-		if (xorSum == 0)
-		{
-			ans = temp;
-		}
-		else
-		{
-			ans = -1;
-		}
-	}
-	else
-	{
-		if (xorSum == 0)
-		{
-			ans = 0;
-		}
-		else
-		{
-			ans = xorSum;
-		}
-	}
-	std::cout << ans << std::endl;
+	std::cout << std::endl;
 	return;
 }
 
