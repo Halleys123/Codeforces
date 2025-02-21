@@ -12,6 +12,7 @@ void solution()
 	// get size of array
 	std::cin >> size;
 	// if array is of size 1 then it is good
+	// 1 2 3 4 5 6
 	if (size == 1)
 	{
 		std::cout << "YES" << std::endl;
@@ -19,6 +20,13 @@ void solution()
 		return;
 	}
 	int *arr = new int[size];
+	// 0000 00 parity good
+	char flags = 1;
+	std::cin >> arr[0];
+	for (int i = 0; i < size - 1; i++)
+	{
+		std::cin >> arr[i];
+	}
 }
 
 int main()
