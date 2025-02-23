@@ -10,37 +10,48 @@ void solution()
 	int size;
 	std::cin >> size;
 	int *arr = new int[size];
-	int a = 1, b = 1;
-	int i = 0, j = size - 1;
+	std::cin >> arr[0];
 	for (int i = 0; i < size; i++)
 	{
 		std::cin >> arr[i];
 	}
-	i = 0;
-	while (i <= j)
+	int i = 0, j = size - 1;
+	int sProd = arr[0], eProd = arr[size - 1];
+	while ((sProd != eProd) || (i < j))
 	{
-		if (a == b)
+		if (sProd > eProd)
 		{
-			a *= arr[++i];
-			b *= arr[--j];
+			j -= 1;
+			eProd *= arr[j];
 		}
-		else if (a < b)
+		else if (sProd < eProd)
 		{
-			a *= arr[++i];
+			i += 1;
+			sProd *= arr[i];
 		}
 		else
 		{
-			b *= arr[--j];
+			// i += 1;
+			j -= 1;
+			eProd *= arr[j];
 		}
 	}
-	if (i == j && a == b)
-	{
-		std::cout << i << std::endl;
-	}
+	if (sProd == eProd)
+		std::cout << i + 1 << std::endl;
 	else
-	{
 		std::cout << -1 << std::endl;
-	}
+
+	// 2 2 1 2 1 2
+	// 2 4 4 8 8 16
+	// 2 2 4 4 8 16
+
+	// 1 2 1
+	// 1 2 2
+	// 1 2 2
+
+	// 2 2 1 2
+	// 2 4 4 8
+	// 2 2 4 8
 }
 
 int main()

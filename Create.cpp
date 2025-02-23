@@ -4,7 +4,7 @@
 #include <fstream>
 #include <algorithm>
 
-int allowedRatings[] = {800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800};
+int allowedRatings[] = {800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000, 2200, 2400, 2600, 2800};
 
 int main(int argc, char *argv[])
 {
